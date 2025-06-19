@@ -1,9 +1,9 @@
-import Counter from "./components/Counter";
+import Tasks from "./components/Tasks";
 
 const App = () => {
   return (
     <div>
-      <Counter />
+      <Tasks />
     </div>
   );
 };
