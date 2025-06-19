@@ -1,19 +1,46 @@
-import UserProfile from "./components/UserProfile";
+import "./App.css";
+import ProfileName from "./components/ProfileName";
+import ProfileImage from "./components/ProfileImage";
+import ProfileRole from "./components/ProfileRole";
+import ProfileAbout from "./components/ProfileAbout";
+import Profileicons from "./components/Profileicons";
+
 const App = () => {
   return (
     <div>
-      <UserProfile
-        name="Kalaiselvi Palanisamy"
-        email="kalaiselvi.palani02@gmail.com"
-        location="India"
-        about="Publishing and graphic design, Lorem ipsum is a placholder text commonly used to demonstrate the visual form."
-      />
-      <UserProfile
-        name="Agnes"
-        email="agens@gmail.com"
-        location="India"
-        about="Publishing and graphic design, Lorem ipsum is a placholder text commonly used to demonstrate the visual form."
-      />
+      <div className="instagram-post-1">
+        <div className="akar-iconstwitter-fill" />
+
+        <section className="post-frame">
+          <div className="post-frame-child" />
+          <div className="rectangle-shape-parent">
+            <div className="rectangle-shape" />
+            <div className="wrapper-ellipse-shape">
+              {/* Image component */}
+              <ProfileImage image="https://cdn.pixabay.com/photo/2024/01/10/16/20/woman-8499928_1280.jpg" />
+            </div>
+          </div>
+          <div className="secondary-frame">
+            <div className="title-text-parent">
+              <div className="title-text">
+                {/* profile name component */}
+                <ProfileName name="Masynctech" />
+                {/* profile role */}
+                <ProfileRole role="MERN Stack Dev" />
+              </div>
+              <div className="personal-choice">
+                <div className="vertical-line" />
+                {/* About */}
+                <ProfileAbout />
+              </div>
+            </div>
+            <div className="brand-frame">
+              {/* Social icons */}
+              <Profileicons />
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
