@@ -1,9 +1,9 @@
-import Tasks from "./components/Tasks";
+import Posts from "./components/Posts";
 
 const App = () => {
   return (
     <div>
-      <Tasks />
+      <Posts />
     </div>
   );
 };
