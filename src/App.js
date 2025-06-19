@@ -1,38 +1,19 @@
-import "./UserProfile.css";
-import style from "./UserProfile.module.css";
-//Traditional === html page., but in react  Component
+import UserProfile from "./components/UserProfile";
 const App = () => {
-  //Inline style object for the conatiner
-  const containerStyle = {
-    textAlign: "center",
-    margin: "20px",
-  };
   return (
     <div>
-      <div className="alert alert-primary" role="alert">
-        A simple primary alert—check it out!
-      </div>
-      <div className="alert alert-secondary" role="alert">
-        A simple secondary alert—check it out!
-      </div>
-      <div className="alert alert-success" role="alert">
-        A simple success alert—check it out!
-      </div>
-      <div className="alert alert-danger" role="alert">
-        A simple danger alert—check it out!
-      </div>
-      <div className="alert alert-warning" role="alert">
-        A simple warning alert—check it out!
-      </div>
-      <div className="alert alert-info" role="alert">
-        A simple info alert—check it out!
-      </div>
-      <div className="alert alert-light" role="alert">
-        A simple light alert—check it out!
-      </div>
-      <div className="alert alert-dark" role="alert">
-        A simple dark alert—check it out!
-      </div>
+      <UserProfile
+        name="Kalaiselvi Palanisamy"
+        email="kalaiselvi.palani02@gmail.com"
+        location="India"
+        about="Publishing and graphic design, Lorem ipsum is a placholder text commonly used to demonstrate the visual form."
+      />
+      <UserProfile
+        name="Agnes"
+        email="agens@gmail.com"
+        location="India"
+        about="Publishing and graphic design, Lorem ipsum is a placholder text commonly used to demonstrate the visual form."
+      />
     </div>
   );
 };
