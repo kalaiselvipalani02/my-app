@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import CounterContext from "./CounterContext ";
 const CounterLogic = () => {
-  const { count, increment, decrement } = useContext(CounterContext);
+  const { count, increment, decrement, reset } = useContext(CounterContext);
   return (
     <div>
       <div className="counter-container">
@@ -11,6 +11,9 @@ const CounterLogic = () => {
         </button>
         <button className="button" onClick={decrement}>
           -
+        </button>
+        <button className="button" onClick={reset}>
+          Reset
         </button>
       </div>
     </div>

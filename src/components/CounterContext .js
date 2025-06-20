@@ -11,9 +11,12 @@ export const CounterProvider = ({ children }) => {
   const decrement = () => {
     setCount(count - 1);
   };
+  const reset = () => {
+    setCount(0);
+  };
 
   return (
-    <CounterContext.Provider value={{ count, increment, decrement }}>
+    <CounterContext.Provider value={{ count, increment, decrement, reset }}>
       {children}
     </CounterContext.Provider>
   );
