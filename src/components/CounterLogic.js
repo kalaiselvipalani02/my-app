@@ -1,4 +1,6 @@
-import React, { useReducer } from "react";
+import React, { createContext, useContext, useReducer } from "react";
+
+const CounterContext = createContext();
 
 const initialState = {
   count: 0,
@@ -13,8 +15,17 @@ const reducer = (state, action) => {
     return { count: initialState.count };
   }
 };
-const CounterLogic = () => {
+
+export const CounterProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <CounterContext.Provider value={{ state, dispatch }}>
+      {children}
+    </CounterContext.Provider>
+  );
+};
+const CounterLogic = () => {
+  const { state, dispatch } = useContext(CounterContext);
   return (
     <div>
       <div className="counter-container">
